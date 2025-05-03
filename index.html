@@ -1,30 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulário de Laudo Judicial</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Gerador de Laudo Judicial</h1>
-    <form id="laudoForm">
-      <label>Nº do Processo: <input type="text" id="processo" required></label>
-      <label>Juízo / Comarca: <input type="text" id="juizo" required></label>
-      <label>Autor: <input type="text" id="autor" required></label>
-      <label>Réu: <input type="text" id="reu" required></label>
-      <label>Tipo do Imóvel: <input type="text" id="tipoImovel" required></label>
-      <label>Endereço do Imóvel: <input type="text" id="enderecoImovel" required></label>
-      <label>Data da Vistoria: <input type="date" id="dataVistoria" required></label>
-      <label>Conclusão Técnica: <textarea id="conclusao" rows="5" required></textarea></label>
-      <label>Local e Data do Laudo: <input type="text" id="dataLocal" required></label>
-      <button type="submit">Gerar Laudo</button>
-    </form>
+<form id="laudoForm">
+  <input id="processo" placeholder="Processo nº" required />
+  <input id="juizo" placeholder="Juízo / Comarca" required />
+  <input id="autor" placeholder="Autor" required />
+  <input id="reu" placeholder="Réu" required />
+  <input id="tipoImovel" placeholder="Tipo de Imóvel" required />
+  <input id="enderecoImovel" placeholder="Endereço do Imóvel" required />
+  <input id="dataVistoria" type="date" required />
+  <textarea id="conclusao" placeholder="Conclusão Técnica" required></textarea>
+  <input id="dataLocal" placeholder="Local e Data" required />
+  <button type="submit">Gerar Laudo</button>
+</form>
 
-    <div id="resultado" style="white-space: pre-wrap; margin-top: 20px;"></div>
-  </div>
+<div id="resultado" style="white-space: pre-wrap; margin-top: 20px;"></div>
 
-  <script src="laudo_judicial.js"></script>
-</body>
-</html>
+<button onclick="gerarWord()">Exportar como Word</button>
+<button onclick="gerarPDF()">Exportar como PDF</button>
