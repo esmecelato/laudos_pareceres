@@ -1,97 +1,50 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo geral do corpo */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    padding: 40px;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
 }
 
-/* Título da página */
+.container {
+  background: #fff;
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
 h1 {
-    text-align: center;
-    color: #2d89ef;
-    margin-bottom: 40px;
+  text-align: center;
+  color: #333;
 }
 
-/* Formulário */
-form {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
-form h2 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: #444;
-    font-size: 20px;
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-/* Labels e campos */
-label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-    color: #555;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-}
-
-/* Botão */
 button {
-    display: block;
-    background-color: #2d89ef;
-    color: white;
-    border: none;
-    padding: 14px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: auto;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
 }
 
 button:hover {
-    background-color: #1c65c8;
-}
-
-/* Contrato Gerado */
-#generatedContract {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    line-height: 1.6;
-    font-size: 16px;
-    white-space: pre-wrap;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-    form, #generatedContract {
-        padding: 20px;
-    }
-
-    button {
-        width: 100%;
-    }
+  background-color: #0056b3;
 }
