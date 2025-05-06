@@ -1,17 +1,192 @@
-<form id="laudoForm">
-  <input id="processo" placeholder="Processo nº" required />
-  <input id="juizo" placeholder="Juízo / Comarca" required />
-  <input id="autor" placeholder="Autor" required />
-  <input id="reu" placeholder="Réu" required />
-  <input id="tipoImovel" placeholder="Tipo de Imóvel" required />
-  <input id="enderecoImovel" placeholder="Endereço do Imóvel" required />
-  <input id="dataVistoria" type="date" required />
-  <textarea id="conclusao" placeholder="Conclusão Técnica" required></textarea>
-  <input id="dataLocal" placeholder="Local e Data" required />
-  <button type="submit">Gerar Laudo</button>
-</form>
+`SOLICITAÇÃO DE LAUDOS.html`
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edson Esmecelato | Avaliação Imobiliária</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      border-bottom: 2px solid #003366;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      display: flex;
+      min-height: 754px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background: linear-gradient(90deg, #003366, #0077cc);
+      color: white;
+    }
+    .hero-content {
+      max-width: 600px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .hero a {
+      background: white;
+      color: #003366;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    .section h2 {
+      color: #003366;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    form button {
+      padding: 10px 20px;
+      background: #0077cc;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    footer img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+    footer div {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
 
-<div id="resultado" style="white-space: pre-wrap; margin-top: 20px;"></div>
+<header>
+  <h1>Edson Esmecelato</h1>
+  <p>Perito Judicial habilitado no Tribunal de Justiça do Paraná - TJPR</p>
+  <p>Corretor de Imóveis | CRECI 44.628 PR</p>
+  <p>Avaliador de Imóveis | CNAI 47.536 DF</p>
+</header>
 
-<button onclick="gerarWord()">Exportar como Word</button>
-<button onclick="gerarPDF()">Exportar como PDF</button>
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#diferenciais">Diferenciais</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Laudo Judicial Técnico de Avaliação Imobiliária.</h1>
+    <p>Atendimento a Processos judiciais, Extrajudiciais, Inventários e Avaliações Mercadológicas.</p>
+    <p>Atendimento como Assistente Judicial em Processos Forenses, auxiliando Advogado e/ou Promotor de Justiça.</p>
+    <h1>Laudo para Seguro Patrimonial.</h1>
+    <h1>Laudo Cautelar Vizinho.</h1>
+    <h1>Vistoria de Locação ou Entrega de Imóvel.</h1>
+    <a href="#contato">Solicite seu Laudo</a>
+  </div>
+</section>
+
+<section class="section" id="sobre">
+  <h2>Sobre Edson Esmecelato</h2>
+  <p>Com formação técnica e experiência sólida no mercado imobiliário, ofereço Laudos ou Pareceres com responsabilidade técnica e legalidade, conforme as normas da ABNT (NBR 14653).</p>
+</section>
+
+<section class="section" id="servicos">
+  <h2>Serviços</h2>
+  <ul>
+    <li>Laudo de Avaliação Judicial</li>
+    <li>Parecer Técnico de Avaliação Mercadológica (PTAM)</li>
+    <li>Avaliações Mercadológicas Rurais e Urbanas</li>
+    <li>Perícias em Ações Judiciais</li>
+    <li>Assistente Judicial de Advogados e/ou Promotor de Justiça</li>
+    <li>Laudo para Seguro Patrimonial</li>
+    <li>Laudo Cautelar Vizinho</li>
+    <li>Vistoria de Locação ou Entrega de Imóvel</li>
+  </ul>
+</section>
+
+<section class="section" id="diferenciais">
+  <h2>Diferenciais</h2>
+  <ul>
+    <li>Responsabilidade técnica e ética</li>
+    <li>Laudos fundamentados e reconhecidos</li>
+    <li>Atendimento personalizado</li>
+    <li>Perito Nomeado pela Justiça do Paraná</li>
+  </ul>
+</section>
+
+<section class="section" id="contato">
+  <h2>Solicite um Orçamento</h2>
+  <form>
+    <input type="text" placeholder="Seu nome completo" required />
+    <input type="email" placeholder="Seu e-mail" required />
+    <input type="tel" placeholder="Telefone ou WhatsApp" />
+    <textarea rows="5" placeholder="Descreva seu imóvel ou solicitação..."></textarea>
+    <button type="submit">Enviar Solicitação</button>
+  </form>
+</section>
+
+<footer>
+  <img src="imagens/edson.jpg" alt="Edson Viana Esmecelato" />
+  <div>
+    <p><strong>Edson Viana Esmecelato</strong></p>
+    <p>Perito Judicial habilitado no Tribunal de Justiça do Paraná</p>
+    <p>Corretor de Imóveis | CRECI 44.628 PR</p>
+    <p>Avaliador de Imóveis | CNAI 47.536 DF</p>
+    <p>Rua Francisco Rodrigues de Souza, 148 – Terra Roxa – PR</p>
+    <p>(44) 99906-1434 | esmecelatocorretor@gmail.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+```
+
